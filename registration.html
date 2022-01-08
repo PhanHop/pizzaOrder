@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="/css/registration.css">
+    <script src = "/js/validateRegistration.js"></script>
+</head>
+<body>
+    <div class="main">
+    
+        <form action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php" method="post" class="form" id="form-1" >
+            <h3 class="heading">Create an account</h3>
+            <p class="desc">Already have an account? Sign in</p>
+            <div class="space"></div>
+            <div class="form-group">
+                <label for="fullname" class="form-lable">User Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="" class="form-control">
+                <span class="form-massage"></span>
+            </div> 
+            <div class="form-group">
+                <label for="fullname" class="form-lable">Sex:</label>
+                <div class="sexinput">
+                    <input type="radio" id="" name="sex" value="Male"> <span>Male</span>
+                    <input type="radio" name="sex" id="" value="Female"> <span>Female</span>                   
+                </div>
+                <span class="form-massage"></span>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-lable">Email</label>
+                <input type="text" id="email" name="email"  class="form-control">
+                <span class="form-massage"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="form-lable">Phone number:</label>
+                <input type="number" id="phone" name="phone"  class="form-control">
+                <span class="form-massage"></span>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-lable">Password</label>
+                <input type="password" id="password" name="password"  class="form-control">
+                <span class="form-massage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password_confirm" class="form-lable">Password Confirm</label>
+                <input type="password" id="password_confirm" name="password_confirm"  class="form-control">
+                <span class="form-massage"></span>
+            </div>
+            <div class="form-group">
+                <label for="favorite" class="form-lable">Favorite pizza</label>
+                <input type="text" list="pizza" class="form-control" name="favorite_pizza">
+                <span class="form-massage"></span>
+            </div>
+            <button type="reset" class="btn-reset">Reset</button>
+            <!-- <input type="submit" value="submit"> -->
+            <button class="form-submit submit_disabled" id = "submit_register" type="submit">Create</button>
+        </form>
+    </div>
+    <datalist id="pizza">
+        <option>Pizza Secura</option>
+        <option>Pizza Donacuma</option> 
+        <option>Pizza Alester</option> 
+        <option>Pizza Italia</option> 
+        <option>Pizza Evanalis</option> 
+        <option>Pizza Manucia</option> 
+        <option>Pizza Lapataa</option> 
+    </datalist>
+
+    <script>
+        Validator({
+            form: 'form-1',
+            formMassage: '.form-massage',
+            rules: [
+                Validator.isRequired('#fullname'),    
+                Validator.isRequired('#email'),  
+                Validator.isRequired('#phone'),            
+                Validator.isEmail('#email'),
+                Validator.isRequired('#password'),
+                Validator.minLength('#password', 8),
+                Validator.isRequired('#password_confirm'), 
+                Validator.isConfirmPassword('#password_confirm', function(){
+                    return document.querySelector('#password').value;
+                })
+            ]
+        });
+    </script>
+</body>
+</html>

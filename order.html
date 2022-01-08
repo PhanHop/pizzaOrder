@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Store</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/order.css">
+    <link rel="stylesheet" href="/css/registration.css">
+</head>
+<body>
+    <header class="header" id="header">
+    </header>
+    <main>
+        <div class="order-title">
+            <h1>Order Now</h1>
+        </div>
+        <div class="order-container">
+            <div class="order-product">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quanlity</th>
+                        <th>Total Price</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="img-td">
+                            <img src="/img/pizza1.jpg" alt="" class="img-product">
+                        </td>
+                        <td>
+                            <span class="td-name">Pizza Manucia</span>
+                        </td>
+                        <td class="td-price">
+                            4$
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td class="td-price">
+                            8$
+                        </td>
+                        <td>
+                            <span>&times;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="img-td">
+                            <img src="/img/spaghetti1.jpg" alt="" class="img-product">
+                        </td>
+                        <td>
+                            <span class="td-name">Spaghetti</span>
+                        </td>
+                        <td class="td-price">
+                            4$
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td class="td-price">
+                            4$
+                        </td>
+                        <td>
+                            <span>&times;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="img-td">
+                            <img src="/img/drink2.jpg" alt="" class="img-product">
+                        </td>
+                        <td>
+                            <span class="td-name">Pepsi</span>
+                        </td>
+                        <td class="td-price">
+                            1$
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td class="td-price">
+                            2$
+                        </td>
+                        <td>
+                            <span>&times;</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="img-td">
+                            <img src="/img/salad1.jpg" alt="" class="img-product">
+                        </td>
+                        <td>
+                            <span class="td-name">Salad 3</span>
+                        </td>
+                        <td class="td-price">
+                            1$
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td class="td-price">
+                            1$
+                        </td>
+                        <td>
+                            <span>&times;</span>
+                        </td>
+                    </tr>      
+                </table>
+                <div class="total-price">
+                    <h2>Total : 15$</h2>
+                </div>
+            </div>
+            <div class="order-pay">
+                <form action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php" method="post" class="form-order" id="form-2">
+                    <h2>Billing Infomation</h2>
+                    <div class="form-item">
+                        <input type="text" name="First_Name" class= "nameOrder" placeholder="First name" id="firstName">
+                        <input type="text" name="Last_Name" class="nameOrder" placeholder="Last name" id="lastName">    
+                        <span class="form-massage"></span>                        
+                    </div>
+                    <div class="form-item">
+                        <input type="number" class="orderInput" name="Phone" placeholder="Phone number" id="phone">
+                        <span class="form-massage"></span>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" name="Email" id="email" class="orderInput" placeholder="Email">
+                        <span class="form-massage"></span>
+                    </div>
+                    <div class="form-item radio">
+                        <label for="purchaseForm">Purchase form</label>
+                        <div>
+                            <input type="radio" name="Purchase" id="pickup" class="checkboxOrder" value="Pick up" onclick="selectPickupRadio('pickup', 'deliveryAddress'), removeAutoFillAddress('pickup','autoFill')"><span >Pick up</span>
+                            <input type="radio" name="Purchase" id="delivery" class="checkboxOrder" value="Delivery" onclick="selectDeliveryRadio('delivery', 'deliveryAddress'), autoFillAddress('delivery','autoFill')"><span>Delivery</span>                            
+                        </div>
+                        <span class="form-massage"></span>
+                    </div>
+                    <div class="form-item" id="deliveryAddress">
+                        <input type="text" name="Delivery_Address" id="deliveryAddressInput" class="orderInput" placeholder="Delivery address">
+                        <span class="form-massage"></span>
+                    </div>
+                    <div class="checkbox-form" id="autoFill">
+                        <input type="checkbox" name="" id="autoFillInputCheckbox">
+                        <label for="">Same as delivery address</label>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" name="Billing_Address" id="billingAddress" class="orderInput" placeholder="Billing address">
+                        <span class="form-massage"></span>
+                    </div>
+
+                    <div class="form-item radio">
+                        <label for="payment">Payments</label>
+                        <div>
+                            <input type="radio" name="Payments" id="pickupPay" class="checkboxOrder" value="Pickup Pay" onclick="selectPickupRadio('pickupPay', 'credit')"><span>Pick up</span>
+                            <input type="radio" name="Payments" id="onlinePay" class="checkboxOrder" value="Online Pay" onclick="selectDeliveryRadio('onlinePay', 'credit')"><span>Online</span>                            
+                        </div>
+                        <span class="form-massage"></span>
+                    </div>
+                    <div class="form-item radio" id="credit">
+                        <label for="creditCard">Credit card</label>
+                        <select name="Credit_Card" id="creditCard">
+                            <option value="Visa">Visa</option>
+                            <option value="MasterCard">Master Card</option>
+                            <option value="AmericanExpress">American Express</option>
+                        </select>
+                        <!-- <div> -->
+                            <input type="number" name="Credit_Card_Number" id="creditcardnumber" class="orderInput" placeholder="Credit card number">   
+                        <!-- </div> -->
+                        <span class="form-massage"></span>
+                    </div>
+                    <div class="form-item radio">
+                        <label for="Orther_Requirements">Other requirements</label>
+                        <div>
+                            <textarea name="Orther_Requirements" id="textareaOrder" class="orderInput" cols="30" rows="8" placeholder="Exp: add more chili, no onion"></textarea>
+                        </div>
+                    </div>
+                    
+                        <button type="submit" class="orderInput" id="orderSubmit">Order Now</button>
+                    
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer id="contact">
+    </footer>
+    <script src="/js/loadHeaderFooter.js"></script>
+    <script src="/js/order.js"></script>
+    <script src="/js/validateRegistration.js"></script>
+    <script>
+        Validator({
+            form: 'form-2',
+            formMassage: '.form-massage',
+            rules: [
+                Validator.isRequired('#firstName'), 
+                Validator.isRequired('#lastName'),  
+                Validator.isRequired('#billingAddress'),   
+                Validator.isRequired('#email'),  
+                Validator.isRequired('#phone'), 
+                Validator.isRequired('#creditcardnumber'), 
+                
+                Validator.minLength('#phone', 10),        
+                Validator.isEmail('#email'),
+            ]
+        });
+
+        window.onload = function(){
+            let delivery = document.getElementsByClassName('checkboxOrder');
+            for(let i = 0; i < delivery.length; i++){
+                delivery[i].checked = false;
+            }
+            
+        }
+    </script>
+</body>
+</html>

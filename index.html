@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Store</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.min.css">
+</head>
+<body>
+    <header class="header" id="header">
+    </header>
+    <main>
+        <div class="slider">
+            <div class="slide slide1 fade"></div>
+            <div class="slide slide2 fade"></div>
+            <div class="slide slide3 fade"></div>
+            <div class="slide slide4 fade"></div>
+            <div class="slide slide5 fade"></div>
+        </div>
+        <div class="cook-table" id="menu">
+            <div class="menu-title">
+                <div class="space"></div>
+                <span>Menu</span>
+                <div class="space"></div>
+            </div>
+            <div class="menu-container">
+                <div class="pizza-type" id="pizza" onclick="loadProduct('pizza')">
+                    <p class="pizzaTypeName">Pizza</p>
+                </div>
+                <div class="pizza-type" id="dessert" onclick="loadProduct('dessert')">
+                    <p class="pizzaTypeName">Dessert</p>
+                </div>
+                <div class="pizza-type" id="spaghetti" onclick="loadProduct('spaghetti')">
+                    <p class="pizzaTypeName">Spaghetti</p>
+                </div>
+                <div class="pizza-type" id="salad" onclick="loadProduct('salad')">
+                    <p class="pizzaTypeName">Salad</p>
+                </div>
+                <div class="pizza-type" id="drink" onclick="loadProduct('drink')">
+                    <p class="pizzaTypeName">Drinks</p>
+                </div>
+                <div class="pizza-type" id="combo" onclick="loadProduct('combo')">
+                    <p class="pizzaTypeName">Combo</p>
+                </div>
+                <div class="pizza-type" id="other" onclick="loadProduct('other')">
+                    <p class="pizzaTypeName">Other</p>
+                </div>
+            </div>
+            <div class="menu-product">
+                <div class="products" id="productsId">
+
+                </div>                
+            </div>
+        </div>
+        <div class="combo">
+            <div class="combo-title">
+                <h1>Combo</h1>
+                <h3>The more you buy, the cheaper the price</h3>
+            </div>
+            <div class="products" id="product-combo">
+                <div class="combo-item">
+                    <img src="/img/combo1.jpg" alt="" class="pizza-img combo-img">
+                    <div class="combo-container">
+                        <span class="combo-name" >Combo 01</span><button class="btn-order">Order</button>
+                        <div class="space-combo"></div>
+                        <div class="combo-prices">
+                            <p>2 peoples</p>
+                            <p class="combo-price">26.99$</p>
+                        </div>
+                        <p class="combo-element">
+                            2 pizza + 2 Coca + 1 Dessert + 1 Spaghetti
+                        </p>
+                    </div>
+                </div>
+                <div class="combo-item">
+                    <img src="/img/combo2.jpg" alt="" class="pizza-img combo-img">
+                    <div class="combo-container">
+                        <span class="combo-name" >Combo 02</span><button class="btn-order">Order</button>
+                        <div class="space-combo"></div>
+                        <div class="combo-prices">
+                            <p>3 peoples</p>
+                            <p class="combo-price">29.99$</p>
+                        </div>
+                        <p class="combo-element">
+                            3 pizza + 3 Coca + 1 Salad + 1 Spaghetti
+                        </p>
+                    </div>
+                </div>
+                <div class="combo-item">
+                    <img src="/img/combo3.jpg" alt="" class="pizza-img combo-img">
+                    <div class="combo-container">
+                        <span class="combo-name" >Combo 03</span><button class="btn-order">Order</button>
+                        <div class="space-combo"></div>
+                        <div class="combo-prices">
+                            <p>3 peoples</p>
+                            <p class="combo-price">30$</p>
+                        </div>
+                        <p class="combo-element">
+                            3 pizza + 3 Coca + 1 Salad + 1 Dessert
+                        </p>
+                    </div>
+                </div>
+                <div class="combo-item">
+                    <img src="/img/combo4.jpg" alt="" class="pizza-img combo-img">
+                    <div class="combo-container">
+                        <span class="combo-name" >Combo 04</span><button class="btn-order">Order</button>
+                        <div class="space-combo"></div>
+                        <div class="combo-prices">
+                            <p>3 peoples</p>
+                            <p class="combo-price">28.99$</p>
+                        </div>
+                        <p class="combo-element">
+                            3 pizza + 3 Coca + 1 Salad + 1 Spaghetti
+                        </p>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <div id="blog">
+            <div class="combo-title" id="blog-title">
+                <h1>Bruno Pizzeria</h1>
+                <h3>Finger lickin’good</h3>
+            </div>
+            <div class="info">
+                <div class="info-store">
+                    <img src="/img/store.jpg" alt="">   
+                    <p>Including a chain of 20 large domestic and foreign stores</p>
+                </div>
+                <div class="info-store">
+                    <img src="/img/express.jpg" alt="">   
+                    <p>Pizza Express is committed to always deliver on time and with the cheapest delivery costs .</p>
+                </div>
+                <div class="info-store">
+                    <img src="/img/chef.png" alt="">   
+                    <p>including 20 chefs and 100 of sales staff</p>
+                </div>
+                <div class="info-store">
+                    <img src="/img/customer.jpg" alt="">   
+                    <p>1 million cakes are sold every year. 500k online cake orders</p>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="blog-item">
+                    <div class="blog-account">
+                        <img src="/img/manager.jpg" alt="" class="blog-img">
+                    </div>
+                    <article class="blog-container">
+                        <h3>Mr. Bruno</h3>
+                        <p class="blog-content">"Since the first store opened at the end of 2006, Pizza Hut has been constantly growing, accelerating and transforming to serve Vietnamese customers. We will expand our chain store network to 400 in the future. with the mission of "Bringing joyful and happy moments to everyone. "</p>                 
+                    </article>
+                </div>
+                <div class="blog-item">
+                    <div class="blog-account">
+                        <img src="/img/chef.png" alt="" class="blog-img">
+                    </div>
+                    <article class="blog-container">
+                        <h3>Chef</h3>
+                        <p class="blog-content">"Available after 40 minutes, hot. Pizza is quite similar to pepperonis but pepp to buy 1 get 1 free is very boring, squishy. Can't make up for this, the filling is still full, the cheese is just delicious. Very ok! 3 people ate 2 M's but lamented. There will be longer orders <3</p>
+                    </article>
+                </div>   
+                <div class="blog-item">
+                    <div class="blog-account">
+                        <img src="/img/shiper.jpg" alt="" class="blog-img">
+                    </div>
+                    <article class="blog-container">
+                        <h3>Shiper</h3>
+                        <p class="blog-content">"Pizza Express is quite far from my house but I see that you say it's delicious, the price is also cheap, pizza size 24cm is only 100k 1. Order hawaiian and beefy, both are delicious, beefy gives a lot of cheese"</p>
+                    </article>
+                </div>  
+                <div class="blog-item">
+                    <div class="blog-account">
+                        <img src="/img/customer.jpg" alt="" class="blog-img">
+                    </div>
+                    <article class="blog-container">
+                        <h3>Customer</h3>
+                        <p class="blog-content">"The crust is crispy, not hard, the cheese layer is greasy and fragrant. If you don't eat it all at night, put it in the refrigerator tomorrow to take it out for breakfast, even though you put it in the microwave, the cake still almost retains its flavor. taste at first"</p>
+                    </article>
+                </div>               
+            </div>
+        </div>
+    </main>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-product">
+        <h2 class="modal-title">Products in cart</h2>
+        <div class="modal-product-items" id="modalItems">
+
+        </div>
+        <div class="modal-footer">
+            <div class="modal-order">
+                <a href="/order.html" class="order-detail">Go to cart</a>
+            </div>
+            <div class="modal-order">
+                <a href="" >Continue order</a>
+            </div>
+            <div class="priceOrder-total">
+                <p>Total: 9$</p>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+</div>
+    <footer id="contact">
+    </footer>
+    <script src="/js/index.js"></script>
+    <script src="/js/loadHeaderFooter.js"></script>
+</body>
+</html>
