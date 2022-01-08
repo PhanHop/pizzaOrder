@@ -50,7 +50,7 @@ function loadPizza(){
     xhttp.onload = function(){
         document.getElementById("productsId").innerHTML = this.responseText;
     }
-    xhttp.open("GET", "/html/pizza.html");
+    xhttp.open("GET", "./html/pizza.html");
     xhttp.send();
     elmPizza.classList.add("colorPizzaType");
 }
@@ -58,19 +58,19 @@ loadPizza();
 function loadProduct(id){
     switch(id){
         case 'pizza':
-            productHtml = "/html/pizza.html";break;
+            productHtml = "./html/pizza.html";break;
         case 'dessert':
-            productHtml = "/html/dessert.html";break;
+            productHtml = "./html/dessert.html";break;
         case 'spaghetti':
-            productHtml = "/html/spaghetti.html";break;
+            productHtml = "./html/spaghetti.html";break;
         case 'salad':
-            productHtml = "/html/salad.html";break;
+            productHtml = "./html/salad.html";break;
         case "drink":
-            productHtml = "/html/drink.html";break;
+            productHtml = "./html/drink.html";break;
         case 'combo':
-            productHtml = "/html/combo.html";break;
+            productHtml = "./html/combo.html";break;
         default:
-            productHtml = "/html/other.html";
+            productHtml = "./html/other.html";
     }
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function(){
