@@ -71,19 +71,19 @@ main{
     position: relative;
 }
 .slide1{
-    background: url("./img/slide8.jpeg");
+    background: url("../img/slide8.jpeg");
 }
 .slide2{
-    background: url("./img/slideShow3.jpg");
+    background: url("../img/slideShow3.jpg");
 }
 .slide3{
-    background: url("./img/slideShow2.jpg");
+    background: url("../img/slideShow2.jpg");
 }
 .slide4{
-    background: url("./img/slideShow6.jpg");
+    background: url("../img/slideShow6.jpg");
 }
 .slide5{
-    background: url("./img/slideShow1.jpg");
+    background: url("../img/slideShow1.jpg");
 }
 .slide{
     width: 100%;
@@ -151,26 +151,26 @@ main{
     margin-left: -30px;
 }
 #pizza{
-    background: url('./img/icon_pizza_active.png') no-repeat;
+    background: url('../img/icon_pizza_active.png') no-repeat;
 }
 #dessert{
-    background: url('./img/icon_khaivi_active.png') no-repeat;
+    background: url('../img/icon_khaivi_active.png') no-repeat;
 }
 #spaghetti{
-    background: url('./img/icon_myi_active.png') no-repeat;
+    background: url('../img/icon_myi_active.png') no-repeat;
 }
 #salad{
-    background: url('./img/icon_salad_active.png') no-repeat;
+    background: url('../img/icon_salad_active.png') no-repeat;
     
 }
 #drink{
-    background: url('./img/icon_douong_active.png') no-repeat;
+    background: url('../img/icon_douong_active.png') no-repeat;
 }
 #combo{
-    background: url('./img/icon_combo_active.png') no-repeat; 
+    background: url('../img/icon_combo_active.png') no-repeat; 
 }
 #other{
-    background: url('./img/icon-phomai-hover.png') no-repeat;
+    background: url('../img/icon-phomai-hover.png') no-repeat;
 }
 @media only screen and (max-width: 1000px){
     .pizza-type p{
@@ -299,7 +299,7 @@ main{
 .combo{
     width: 100%;
     height: 500px;
-    background-image: url("./img/backgoundCombo.jpg");
+    background-image: url("../img/backgoundCombo.jpg");
     background-size: 100% 100%;
     margin-top: 80px;
 }

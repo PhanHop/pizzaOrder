@@ -3,7 +3,7 @@ function loadHeader(idHeader){
     xhttp.onload = function(){
         document.getElementById(idHeader).innerHTML = this.responseText;
     }
-    xhttp.open("GET", "/html/header.html");
+    xhttp.open("GET", "./html/header.html");
     xhttp.send();
 }
 function loadFooter(idFooter){
@@ -11,7 +11,7 @@ function loadFooter(idFooter){
     xhttp.onload = function(){
         document.getElementById(idFooter).innerHTML = this.responseText;
     }
-    xhttp.open("GET", "/html/footer.html");
+    xhttp.open("GET", "./html/footer.html");
     xhttp.send();
 }
 loadHeader("header");
